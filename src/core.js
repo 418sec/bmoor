@@ -184,7 +184,7 @@ function set( root, space, value ){
 	for( i = 0, c = space.length; i < c; i++ ){
 		nextSpace = space[ i ];
 			
-		if (nextSpace === '__proto__'){
+		if (nextSpace === '__proto__' || nextSpace === 'constructor' || nextSpace === 'prototype') {
 			return null;
 		}
 
